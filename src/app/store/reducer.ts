@@ -1,6 +1,7 @@
 import { Course } from '../courses/course';
 import { IAppState } from './IAppState';
-
+import { FILTER_COURSES } from './actions';
+import { Z_FILTERED } from 'zlib';
 
 
 const initialState: IAppState = {
@@ -23,6 +24,17 @@ const initialState: IAppState = {
   ]
 };
 
+function filterCourses(state, action) : IAppState {
+  return Object.assign({}, state, {
+    filteredCourses: state.courses.filter(c => c.name.toLowerCase().indexOf
+    (action.searchText.toLowerCase()) > -1),
+  });
+}
+
 export function reducer(state= initialState, action) {
-  return state;
+  switch(action.type) {
+    case: FILTER_COURSES:
+      return filterCourses(state, action)
+    default: return state;
+  }
 };
