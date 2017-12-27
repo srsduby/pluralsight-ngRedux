@@ -4,7 +4,7 @@ import { FILTER_COURSES } from './actions';
 import { Z_FILTERED } from 'zlib';
 
 
-const initialState: IAppState = {
+const courses = {
   courses: [
     {
       "id": 1,
@@ -22,6 +22,11 @@ const initialState: IAppState = {
       "topic": "Angular"
     }
   ]
+}
+
+const initialState: IAppState = {
+  courses,
+  filteredCourses: courses,
 };
 
 function filterCourses(state, action) : IAppState {
