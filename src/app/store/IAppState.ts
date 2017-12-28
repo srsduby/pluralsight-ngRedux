@@ -1,6 +1,4 @@
-import { Course } from "../courses/course";
-import { filterCourses } from "./actions";
-// const { Course } from '../courses/course'; //typescript related sysntax error?
+import { Course } from '../courses/course';
 
 export interface IAppState {
   courses: Course[],

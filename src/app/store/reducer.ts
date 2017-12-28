@@ -1,7 +1,6 @@
 import { Course } from '../courses/course';
 import { IAppState } from './IAppState';
 import { FILTER_COURSES } from './actions';
-import { Z_FILTERED } from 'zlib';
 
 
 const courses = {
