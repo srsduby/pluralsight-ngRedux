@@ -1,7 +1,6 @@
 import { Course } from '../courses/course';
 import { IAppState } from './IAppState';
-import { FILTER_COURSES } from './actions';
-import { Z_FILTERED } from 'zlib';
+import { FILTER_COURSES } from '../courses/course.actions';
 
 
 const courses = {
@@ -38,7 +37,9 @@ function filterCourses(state, action) : IAppState {
 
 export function reducer(state= initialState, action) {
   switch(action.type) {
-    case : FILTER_COURSES: return filterCourses(state, action);
-    default: return state;
+    case FILTER_COURSES:
+      return filterCourses(state, action);
+    default:
+      return state;
   }
 };
