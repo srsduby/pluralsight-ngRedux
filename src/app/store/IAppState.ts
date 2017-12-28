@@ -4,5 +4,5 @@ import { filterCourses } from "./actions";
 
 export interface IAppState {
   courses: Course[],
-  filterCourses: Course[],
+  filteredCourses: Course[],
 };

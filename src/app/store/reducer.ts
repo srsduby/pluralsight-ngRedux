@@ -26,7 +26,7 @@ const courses = {
 
 const initialState: IAppState = {
   courses,
-  filteredCourses: courses,
+  filteredCourses: courses
 };
 
 function filterCourses(state, action) : IAppState {
@@ -38,8 +38,7 @@ function filterCourses(state, action) : IAppState {
 
 export function reducer(state= initialState, action) {
   switch(action.type) {
-    case: FILTER_COURSES:
-      return filterCourses(state, action)
+    case : FILTER_COURSES: return filterCourses(state, action);
     default: return state;
   }
 };
