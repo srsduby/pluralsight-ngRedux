@@ -38,7 +38,7 @@ function filterCourses(state, action) : IAppState {
 
 export function reducer(state= initialState, action) {
   switch(action.type) {
-    case : FILTER_COURSES: return filterCourses(state, action);
+    case FILTER_COURSES: return filterCourses(state, action);
     default: return state;
   }
 };
