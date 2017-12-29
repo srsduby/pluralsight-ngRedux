@@ -17,18 +17,19 @@ export class CourseListComponent implements OnInit {
 
   constructor(
     private ngRedux: NgRedux<IAppState>,
-    private CourseActions: CourseActions
+    private courseActions: CourseActions
   ) {
   }
 
   filterChanged(searchText: string) {
     console.log('user searched: ', searchText);
-    this.CourseActions.filterCourses(searchText)
+    this.courseActions.filterCourses(searchText)
   }
 
 
 
   ngOnInit() {
+    this.courseActions.getCourses()
     componentHandler.upgradeDom();
-  }
+;  }
 }
